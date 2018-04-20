@@ -1,0 +1,9 @@
+---
+logs:
+  level: DEBUG
+  file: ~
+  token: ~
+default:
+  username: world
+  permission: READ
+  recursive: False

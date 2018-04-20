@@ -1,0 +1,24 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "AbacoMessageFilePemGrant",
+    "description": "Files Permission Grant",
+    "type": "object",
+    "properties": {
+        "uri": {
+            "type": "string",
+            "format": "uri",
+            "pattern": "^(agave):"
+        },
+        "username": {
+            "type": "string",
+            "maxLength": 8,
+            "minLength": 3,
+            "pattern": "^[a-z][-a-z0-9]*$"
+        },
+        "permission": {
+            "type": "string",
+            "enum": ["READ", "WRITE", "EXECUTE", "READ_WRITE", "READ_EXECUTE", "WRITE_EXECUTE", "ALL", "NONE"]
+        }
+    },
+    "required": ["uri", "username", "permission"]
+}
